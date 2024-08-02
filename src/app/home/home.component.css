@@ -3,6 +3,32 @@
     margin: 0px;
     box-sizing: border-box;
 }
+.start{
+  background-image: linear-gradient(to right,rgb(22, 20, 20),rgb(82, 82, 198));
+    height: 70px !important;
+    padding: 20px;
+}
+.demo{
+  color: red;
+}
+table {
+  width: 100%;
+}
+.dynamic{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+
+}
+.head{
+    color: white;
+    text-align: center;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
 .card{
     height: 400px;
     width: 300px;
@@ -47,13 +73,19 @@
     
   }
   .end-continer{
-    background: linear-gradient(rgb(41, 41, 109), rgb(193, 68, 157));
+    background-image: linear-gradient(to right,rgb(22, 20, 20),rgb(82, 82, 198));
     height: 400px;
     width: 100%;
     display: flex;
+    gap: 30px;
     justify-content: space-between;
     padding: 50px;
     color: white;
+  }
+  .foot{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
   @media screen and (min-width: 300px) and (max-width:600px){
 .card-continer{
@@ -61,8 +93,8 @@
     flex-direction: column;
 }
 .end-continer{
-    background: linear-gradient(rgb(41, 41, 109), rgb(193, 68, 157));
-    height: 400px;
+  background-image: linear-gradient(to right,rgb(22, 20, 20),rgb(82, 82, 198));
+    height: 800px ;
     width: 100%;
     display: flex;
     flex-direction: column;

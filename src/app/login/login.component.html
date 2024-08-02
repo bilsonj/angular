@@ -1,27 +1,29 @@
-<div class="overall-login">
+<div class="overall">
+    <form class="example-form" [formGroup]="loginform">
+        <mat-form-field class="example-full-width">
+          <mat-label class="field">email</mat-label>
+          <input  class="field" [(ngModel)]="login.email" matInput placeholder=" enter your email"formControlName="email" name="email" >
+          <small *ngIf="email.invalid && email.dirty ||email.touched" class="required">
+            <div class="rrr" *ngIf="email.errors?.['required']">email is required</div>
+            <div class="rrr" *ngIf="email.errors?.['email']">email is required</div>
+                      </small>
+        </mat-form-field>
+      
 
-    <form class="inputs-overall" #form="ngForm" (ngSubmit)="onSubmit(form)">
-        <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input matInput class="inputbox" name="email" ngModel required email #email="ngModel">
-          </mat-form-field>
-          <mat-form-field>
-            <mat-label>Password</mat-label>
-            <input matInput type="password" class="inputbox" name="Password" ngModel required password #password="ngModel">
-          </mat-form-field>
-          <button mat-raised-button class="btn">Login</button>
-          <div class="loginend">
-            <p><a href="/forgot">forgotpassword</a></p>
-            <p> <a href="/register">click here to registered</a></p>
-           
-          </div>
+        <mat-form-field class="example-full-width">
+          <mat-label  class="field">Password</mat-label>
+          <input  class="field" [(ngModel)]="login.password" matInput placeholder="enter your Password"  type="password" formControlName="password" name="password">
+          <small *ngIf="password.invalid && password.dirty ||password.touched" class="required">
+            <div class="rrr" *ngIf="password.errors?.['required']">password is required</div>
+                      </small>
+        </mat-form-field>
+      
+        <button class="btn" mat-raised-button (click)=" donelogin()" >Login</button>
+       <!-- <a href="" routerLink="register"> click here to Registered</a> -->
+       <a class="link" [routerLink]="['/register']">clich here to register</a>
 
-          @if ( email.touched&& email.invalid){
-            <p class="invalitedata">*Invalide Email Address Entered</p>
-         }
-         @if( password.touched && password.invalid){
-            <p class="invalitedata">*Invalide Password Address Entered Atleast 8 Char</p>
-         }
-    </form>
+      </form>
+
+     
+     
 </div>
-
